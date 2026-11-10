@@ -25,52 +25,39 @@
 <g fill="#fff" opacity=".7"><circle cx="60" cy="40" r="1.3"/><circle cx="150" cy="95" r="1"/><circle cx="260" cy="30" r="1.4"/><circle cx="360" cy="80" r="1"/><circle cx="470" cy="38" r="1.3"/><circle cx="540" cy="110" r="1"/><circle cx="420" cy="140" r=".9"/></g>
 <circle cx="505" cy="75" r="26" fill="#f2ead2"/><circle cx="515" cy="69" r="26" fill="#1b3a47" opacity=".55"/>
 
-<!-- edificios lejanos -->
 <g fill="#0e1b24"><rect x="0" y="360" width="60" height="340"/><rect x="545" y="300" width="55" height="400"/></g>
 
-<!-- fachada -->
 <rect x="48" y="190" width="504" height="510" fill="url(#muro)"/>
 <rect x="48" y="190" width="504" height="510" fill="url(#ladrillo)"/>
 <rect x="36" y="176" width="528" height="22" fill="#10151c"/>
 
-<!-- resplandor de ventanas -->
 <g class="resp"><circle cx="125" cy="305" r="130" fill="url(#halo)"/><circle cx="300" cy="305" r="130" fill="url(#halo)"/><circle cx="475" cy="305" r="130" fill="url(#halo)"/><circle cx="212" cy="505" r="120" fill="url(#halo)"/><circle cx="388" cy="505" r="40" fill="url(#halo)" opacity=".2"/></g>
 
-<!-- ventana 1: gorra (Desaparecido) -->
 <g transform="translate(65,235)"><use href="#vent"/>
 <g fill="#26150b"><circle cx="60" cy="86" r="19"/><path d="M38 70 Q60 52 82 70 L84 76 L36 76Z"/><rect x="34" y="74" width="52" height="5" rx="2"/><path d="M20 152 Q24 112 60 108 Q96 112 100 152Z"/></g></g>
-<!-- ventana 2: dos personas (Yo soy Otro) -->
 <g transform="translate(240,235)" class="parp"><use href="#vent"/>
 <g fill="#26150b"><circle cx="40" cy="90" r="16"/><circle cx="82" cy="94" r="16"/><path d="M12 152 Q14 114 40 110 Q60 114 64 152Z"/><path d="M58 152 Q60 118 82 114 Q108 118 110 152Z"/></g></g>
-<!-- ventana 3: teléfono (Familia) -->
 <g transform="translate(415,235)"><use href="#vent"/>
 <g fill="#26150b"><circle cx="58" cy="88" r="18"/><path d="M26 152 Q28 112 58 108 Q92 112 94 152Z"/><rect x="72" y="70" width="9" height="30" rx="4" transform="rotate(18 76 85)"/><path d="M82 112 Q96 100 80 90" stroke="#26150b" stroke-width="7" fill="none" stroke-linecap="round"/></g></g>
-<!-- ventana 4: dos figuras juntas (Amado) -->
 <g transform="translate(152,435)"><use href="#vent"/>
 <g fill="#26150b"><circle cx="50" cy="92" r="16"/><circle cx="72" cy="92" r="16"/><path d="M22 152 Q24 116 50 111 L72 111 Q98 116 100 152Z"/></g>
 <path d="M0 0H8V160H0ZM112 0H120V160H112Z" fill="#7a2f2a" opacity=".9"/></g>
-<!-- ventana 5: a oscuras (Niño) -->
 <g transform="translate(328,435)"><rect width="120" height="160" fill="#0b1418"/><rect x="8" y="8" width="104" height="144" fill="#13242d"/>
 <path d="M8 8L112 152M112 8L8 152" stroke="#bfe3ee" stroke-opacity=".07" stroke-width="14"/>
 <g fill="#0b1418"><rect x="56" y="112" width="8" height="20"/><circle cx="60" cy="108" r="9"/></g><circle cx="60" cy="108" r="3" fill="#e8a54b" opacity=".35"/></g>
 
-<!-- marcos y cruces de ventanas -->
 <g stroke="#0b1418" stroke-width="4" fill="none"><path d="M125 243V395M65 315H185"/><path d="M300 243V395M240 315H360"/><path d="M475 243V395M415 315H535"/><path d="M212 443V595M152 515H272"/><path d="M388 443V595M328 515H448"/></g>
 <g fill="#10151c"><rect x="58" y="395" width="134" height="9"/><rect x="233" y="395" width="134" height="9"/><rect x="408" y="395" width="134" height="9"/><rect x="145" y="595" width="134" height="9"/><rect x="321" y="595" width="134" height="9"/></g>
 
-<!-- puerta -->
 <rect x="270" y="620" width="60" height="80" fill="#0b1418"/><rect x="276" y="626" width="48" height="74" fill="#e58f2b" opacity=".32"/><circle cx="316" cy="664" r="2.5" fill="#ffd98a"/>
 <path d="M258 700L342 700L380 780L220 780Z" fill="#e58f2b" opacity=".12"/>
 
-<!-- calle mojada -->
 <rect x="0" y="700" width="600" height="80" fill="url(#piso)"/>
 <g opacity=".28"><rect x="65" y="706" width="120" height="30" fill="#e58f2b"/><rect x="240" y="706" width="120" height="30" fill="#e58f2b"/><rect x="415" y="706" width="120" height="30" fill="#e58f2b"/></g>
 <path d="M0 722H600M0 748H600" stroke="#bfe3ee" stroke-opacity=".08"/>
 
-<!-- canilla que gotea (colgando del alero) -->
 <g><rect x="520" y="198" width="6" height="22" fill="#9aa3a8"/><path d="M523 220q0 12 10 12" stroke="#9aa3a8" stroke-width="6" fill="none" stroke-linecap="round"/><ellipse class="gota" cx="533" cy="240" rx="3" ry="5" fill="#bfe3ee"/></g>
 
-<!-- lluvia -->
 <g clip-path="inset(0)"><g>
 <line class="llu" x1="40" y1="-60" x2="34" y2="-30"/><line class="llu" x1="110" y1="-60" x2="104" y2="-30"/><line class="llu" x1="170" y1="-60" x2="164" y2="-30"/><line class="llu" x1="230" y1="-60" x2="224" y2="-30"/><line class="llu" x1="290" y1="-60" x2="284" y2="-30"/><line class="llu" x1="350" y1="-60" x2="344" y2="-30"/><line class="llu" x1="410" y1="-60" x2="404" y2="-30"/><line class="llu" x1="470" y1="-60" x2="464" y2="-30"/><line class="llu" x1="530" y1="-60" x2="524" y2="-30"/><line class="llu" x1="575" y1="-60" x2="569" y2="-30"/><line class="llu" x1="80" y1="-60" x2="74" y2="-30"/><line class="llu" x1="320" y1="-60" x2="314" y2="-30"/>
 </g></g>
