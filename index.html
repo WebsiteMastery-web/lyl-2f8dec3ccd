@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex,nofollow">
 <title>Lo que el Otro no dice - Liam Kleiman</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&family=Work+Sans:wght@400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{--crema:#f3ede2;--tinta:#1b1b1b;--suave:#55524b;--serif:"Fraunces",Georgia,serif;--sans:"Work Sans",system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -15,21 +15,30 @@ a{color:inherit}img{-webkit-user-drag:none;pointer-events:none}
 .wrap{max-width:70ch;margin:0 auto;padding:0 20px}
 
 /* portada */
-.portada{min-height:100svh;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,72px);align-items:center;max-width:1240px;margin:0 auto;padding:6vh 28px 10vh;position:relative}
+.portada{padding-bottom:12vh;background:repeating-linear-gradient(transparent 0 35px,rgba(70,100,140,.22) 35px 36px);min-height:100svh;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,72px);align-items:center;max-width:none;margin:0;padding:6vh max(28px,calc((100vw - 1240px)/2 + 28px)) 10vh max(96px,calc((100vw - 1240px)/2 + 96px));position:relative}
+.portada::before{content:"";position:absolute;left:max(70px,calc((100vw - 1240px)/2 + 70px));top:0;bottom:0;width:2px;background:rgba(200,70,60,.55)}
 .portada h1{font:700 clamp(3rem,8.5vw,7.6rem)/.93 var(--serif);letter-spacing:-.035em;margin:0 0 5vh}
-.portada h1 .l{display:block;overflow:hidden;padding-bottom:.08em}
-.portada h1 .l>span{display:inline-block;transform:translateY(110%);animation:sube 1s var(--ease) forwards}
+.portada h1 .l{display:block;padding-bottom:.08em}
+.portada h1 .l>span{display:inline-block;transform:translateY(60%);opacity:0;animation:sube 1s var(--ease) forwards}
 .portada h1 .l:nth-child(2)>span{animation-delay:.12s}.portada h1 .l:nth-child(3)>span{animation-delay:.24s}
-.portada h1 em{font-weight:400;background:linear-gradient(transparent 62%,#e8b04c 62% 92%,transparent 92%) no-repeat;background-size:0 100%;animation:marca 1s .9s var(--ease) forwards}
+.portada h1 em{font-weight:400;position:relative;display:inline-block}
+.portada h1 em svg{position:absolute;left:-14%;top:-18%;width:128%;height:136%;overflow:visible;pointer-events:none}
+.portada h1 em path{fill:none;stroke:#c5543b;stroke-width:4;stroke-linecap:round;stroke-dasharray:900;stroke-dashoffset:900;animation:traza 1.4s 1s ease-out forwards}
+@keyframes traza{to{stroke-dashoffset:0}}
 .leyenda,.autor{opacity:0;animation:aparece .8s .7s var(--ease) forwards}
 .linea{border-top:3px solid var(--tinta);padding-top:18px;display:flex;justify-content:space-between;gap:12px 36px;flex-wrap:wrap;transform-origin:left;animation:linea 1s .5s var(--ease) both}
-.linea p{margin:0;font-size:17px}.autor{font:700 1.4rem var(--serif);animation-delay:.9s}
+.linea p{margin:0;font-size:17px}.linea .autor{font-size:3rem}.autor{font:700 3rem/1 Caveat,cursive;animation-delay:.9s;transform:rotate(-2deg)}
 .foto{position:relative;margin:0;max-width:520px;justify-self:center;transform:rotate(2deg);opacity:0;animation:foto 1.1s .4s var(--ease) forwards,flota 7s 1.6s ease-in-out infinite}
-.foto img{width:100%;height:auto;display:block;border-radius:4px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55)}
-.foto figcaption{font:italic .95rem var(--serif);color:var(--suave);margin-top:14px;text-align:center;transform:rotate(-3deg)}
-.baja{position:absolute;bottom:3vh;left:28px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--suave);text-decoration:none;display:flex;align-items:center;gap:10px}
+.foto img{width:100%;height:auto;display:block;border:11px solid #fff;border-radius:2px;box-shadow:0 22px 40px -18px rgba(0,0,0,.5)}
+.foto::before,.foto::after{content:"";position:absolute;width:96px;height:26px;background:rgba(232,176,76,.78);z-index:2}
+.foto::before{top:-12px;left:-26px;transform:rotate(-38deg)}.foto::after{top:-12px;right:-26px;transform:rotate(36deg)}
+.foto figcaption{font:500 1.35rem/1.15 Caveat,cursive;color:#2f3d57;margin-top:16px;text-align:left;transform:rotate(-2deg)}
+.nota{position:absolute;right:-4%;bottom:-6.4rem;font:700 1.35rem/1.1 Caveat,cursive;color:#c5543b;transform:rotate(4deg);max-width:11rem;text-align:left}
+.nota svg{display:block;width:70px;height:46px;margin:0 0 2px 6px;transform:scaleX(-1) rotate(-10deg)}
+.nota svg path{fill:none;stroke:#c5543b;stroke-width:3;stroke-linecap:round}
+.baja{position:absolute;bottom:3vh;left:max(96px,calc((100vw - 1240px)/2 + 96px));font:700 1.6rem Caveat,cursive;color:var(--suave);text-decoration:none;display:flex;align-items:center;gap:10px}
 .baja::after{content:"";width:2px;height:34px;background:var(--tinta);animation:gota 1.8s ease-in-out infinite;transform-origin:top}
-@keyframes sube{to{transform:none}}@keyframes marca{to{background-size:100% 100%}}
+@keyframes sube{to{transform:none;opacity:1}}@keyframes marca{to{background-size:100% 100%}}
 @keyframes aparece{to{opacity:1}}@keyframes linea{from{transform:scaleX(0)}}
 @keyframes foto{from{opacity:0;transform:rotate(9deg) translateY(50px)}to{opacity:1;transform:rotate(3deg)}}
 @keyframes flota{50%{transform:rotate(1.5deg) translateY(-10px)}}
@@ -71,21 +80,20 @@ body:has(.vista:target) .inicio{display:none}
 .firma{font-style:italic;color:var(--suave)}.accion{font-style:italic;color:var(--suave);padding-left:1.2em}.voz strong{color:#a8402a}
 footer{padding:28px 24px;font-size:14px;color:var(--suave);max-width:1100px;margin:0 auto}
 :focus-visible{outline:3px solid #1b1b1b;outline-offset:3px}
-@media(max-width:860px){.portada{grid-template-columns:1fr;padding-top:8vh}.foto{max-width:420px}.grilla{grid-template-columns:1fr}.tile,.t3,.t4,.t5{grid-column:auto;min-height:0}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.tile,.portada h1 .l>span,.leyenda,.autor,.foto{opacity:1;transform:none}.foto{transform:rotate(3deg)}.portada h1 em{background-size:100% 100%}.cinta div{animation:none}}
+@media(max-width:860px){.portada{grid-template-columns:1fr;padding:8vh 20px 12vh 52px}.portada::before{left:36px}.baja{left:52px}.nota{right:0}.foto{max-width:420px}.grilla{grid-template-columns:1fr}.tile,.t3,.t4,.t5{grid-column:auto;min-height:0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.tile,.portada h1 .l>span,.leyenda,.autor,.foto{opacity:1;transform:none}.foto{transform:rotate(3deg)}.portada h1 em path{stroke-dashoffset:0!important}.cinta div{animation:none}}
 </style>
 </head>
 <body oncontextmenu="return false">
 <div class="inicio">
 <header class="portada" id="portada">
 <div>
-<h1><span class="l"><span>Lo que el</span></span><span class="l"><span><em>Otro</em></span></span><span class="l"><span>no dice</span></span></h1>
+<h1><span class="l"><span>Lo que el</span></span><span class="l"><span><em>Otro<svg viewBox="0 0 200 100" preserveAspectRatio="none" aria-hidden="true"><path d="M30 52C24 20 96 6 150 14C196 22 202 66 160 84C110 100 34 90 18 62C12 48 28 36 52 28"/></svg></em></span></span><span class="l"><span>no dice</span></span></h1>
 <div class="linea"><p class="leyenda">Portfolio final de Lengua y Literatura, 5º año, 2026</p><p class="autor">Liam Kleiman</p></div>
 </div>
-<figure class="foto"><img src="portada.svg" alt="Fachada de un edificio de noche con cinco ventanas, una por unidad; la última está a oscuras" width="600" height="780"><figcaption>Cinco ventanas, una por unidad</figcaption></figure>
-<a class="baja" href="#trabajos">Los trabajos</a>
+<figure class="foto"><img src="portada.svg" alt="Fachada de un edificio de noche con cinco ventanas, una por unidad; la última está a oscuras" width="600" height="780"><figcaption>una ventana por cada unidad del año</figcaption><span class="nota" aria-hidden="true"><svg viewBox="0 0 70 46"><path d="M64 40C40 38 22 28 12 8M12 8L8 24M12 8L26 14"/></svg>esta todavía está apagada, falta un trabajo</span></figure>
+<a class="baja" href="#trabajos">los trabajos, más abajo</a>
 </header>
-<div class="cinta" aria-hidden="true"><div><span>El Otro es Desaparecido</span><i>/</i><span>Yo soy Otro</span><i>/</i><span>El Otro es Familia</span><i>/</i><span>El Otro es Amado</span><i>/</i><span>El Otro es Niño</span><i>/</i><span>El Otro es Desaparecido</span><i>/</i><span>Yo soy Otro</span><i>/</i><span>El Otro es Familia</span><i>/</i><span>El Otro es Amado</span><i>/</i><span>El Otro es Niño</span><i>/</i></div></div>
 <section class="pres"><p>Soy Liam Kleiman y curso 5º Eco B en la Escuela Scholem Aleijem. Acá están los trabajos que hice en Lengua y Literatura este año, uno por unidad. Elegí el que quieras leer.</p></section>
 <section class="grilla" id="trabajos">
 <a class="tile t0" href="#angel"><span class="unidad">El Otro es Desaparecido</span><span class="tit">¿Ángel?...</span><span class="desc">Cuento sobre la guerra de Malvinas, con su argumentación.</span><span class="ir">Leer</span></a>
