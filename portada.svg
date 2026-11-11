@@ -31,7 +31,7 @@
 <rect x="48" y="190" width="504" height="510" fill="url(#ladrillo)"/>
 <rect x="36" y="176" width="528" height="22" fill="#10151c"/>
 
-<g class="resp"><circle cx="125" cy="305" r="130" fill="url(#halo)"/><circle cx="300" cy="305" r="130" fill="url(#halo)"/><circle cx="475" cy="305" r="130" fill="url(#halo)"/><circle cx="212" cy="505" r="120" fill="url(#halo)"/><circle cx="388" cy="505" r="40" fill="url(#halo)" opacity=".2"/></g>
+<g class="resp"><circle cx="125" cy="305" r="130" fill="url(#halo)"/><circle cx="300" cy="305" r="130" fill="url(#halo)"/><circle cx="475" cy="305" r="130" fill="url(#halo)"/><circle cx="212" cy="505" r="120" fill="url(#halo)"/><circle cx="388" cy="505" r="120" fill="url(#halo)"/></g>
 
 <g transform="translate(65,235)"><use href="#vent"/>
 <g fill="#26150b"><circle cx="60" cy="86" r="19"/><path d="M38 70 Q60 52 82 70 L84 76 L36 76Z"/><rect x="34" y="74" width="52" height="5" rx="2"/><path d="M20 152 Q24 112 60 108 Q96 112 100 152Z"/></g></g>
@@ -42,10 +42,8 @@
 <g transform="translate(152,435)"><use href="#vent"/>
 <g fill="#26150b"><circle cx="50" cy="92" r="16"/><circle cx="72" cy="92" r="16"/><path d="M22 152 Q24 116 50 111 L72 111 Q98 116 100 152Z"/></g>
 <path d="M0 0H8V160H0ZM112 0H120V160H112Z" fill="#7a2f2a" opacity=".9"/></g>
-<g transform="translate(328,435)"><rect width="120" height="160" fill="#0b1418"/><rect x="8" y="8" width="104" height="144" fill="#13242d"/>
-<path d="M8 8L112 152M112 8L8 152" stroke="#bfe3ee" stroke-opacity=".07" stroke-width="14"/>
-<g fill="#0b1418"><rect x="56" y="112" width="8" height="20"/><circle cx="60" cy="108" r="9"/></g><circle cx="60" cy="108" r="3" fill="#e8a54b" opacity=".35"/></g>
-
+<g transform="translate(328,435)"><use href="#vent"/>
+<g fill="#26150b"><circle cx="46" cy="98" r="12"/><path d="M26 152 Q28 120 46 116 Q64 120 66 152Z"/><ellipse cx="88" cy="140" rx="17" ry="9"/><circle cx="102" cy="131" r="7"/><path d="M99 126l-2-8 7 4Z"/></g></g>
 <g stroke="#0b1418" stroke-width="4" fill="none"><path d="M125 243V395M65 315H185"/><path d="M300 243V395M240 315H360"/><path d="M475 243V395M415 315H535"/><path d="M212 443V595M152 515H272"/><path d="M388 443V595M328 515H448"/></g>
 <g fill="#10151c"><rect x="58" y="395" width="134" height="9"/><rect x="233" y="395" width="134" height="9"/><rect x="408" y="395" width="134" height="9"/><rect x="145" y="595" width="134" height="9"/><rect x="321" y="595" width="134" height="9"/></g>
 
